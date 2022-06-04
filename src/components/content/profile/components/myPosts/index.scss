@@ -1,0 +1,45 @@
+@import "src/style/variables";
+@import "src/style/mixin";
+.L-my-posts {
+    padding:  25px;
+    border-radius: 25px;
+    background-color: $white;
+    margin-top: 25px;
+    .L-title-posts{
+        font-size: $font-size-24;
+        @include screen-max-width-767{
+            font-size: $font-size-18
+        }
+        @include screen-max-width-576{
+            font-size: $font-size-16
+        }
+    }
+    .L-edit-posts {
+        max-width: 300px;
+        margin: 15px 0;
+        flex-direction: column;
+        textarea {
+            border-radius: 10px;
+            background-color: $grey-base ;
+            box-sizing: border-box;
+            padding:10px;
+        }
+        button {
+            border-radius: 10px;
+            margin-top: 10px;
+            height: 30px;
+            max-width: 110px;
+            width: 100%;
+            align-self: baseline;
+            &:hover{
+                background-color: $blue-dark;
+                transition: $transition ;
+                color:$white
+            }
+            @include screen-max-width-576{
+                max-width: 80px;
+            }
+        }
+    }
+    
+}

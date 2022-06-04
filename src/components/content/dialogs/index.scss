@@ -1,0 +1,73 @@
+@import "src/style/variables";
+@import "src/style/mixin";
+.L-dialogs {
+    width: 100%;
+    @include screen-max-width-576{
+        justify-content: center;
+    }
+    .L-dialog-items {
+        border-radius: 25px;
+        width: 45%;
+        background-color: $white;
+        padding: 15px;
+        margin: 0 20px;
+        @include screen-max-width-576{
+            width: 50%;
+            margin: 0 5px;
+        }
+    }
+    .L-dialog-link,
+    .L-dialog-messege-desc {
+        margin: 15px 0;
+        background-color: $grey-base;
+        border: 1px solid $blue-dark;
+        border-radius: 15px;
+        a,
+        p {
+            font-size: $font-size-18;
+            color: $black;
+            padding: 10px;
+            @include screen-max-width-576{
+                font-size: $font-size-14;
+            }
+        }
+        a{
+            &:hover {
+                color: $blue-dark;
+                transition: $transition;
+            }
+        }
+    }
+    .L-dialog-add-parent {
+        flex-direction: column;
+        max-width: 300px;
+        textarea {
+            width: 100%;
+            border-radius: 10px;
+            background-color: $grey-base;
+            padding:  10px;
+            box-sizing: border-box;
+            @include screen-max-width-576{
+                &::placeholder{
+                    font-size: $font-size-12;
+                }
+            }
+        }
+        button{
+            border-radius: 10px;
+            margin-top: 10px;
+            height: 30px;
+            max-width: 110px;
+            width: 100%;
+            align-self: baseline;
+            &:hover{
+                background-color: $blue-dark;
+                transition: $transition ;
+                color:$white
+            }
+            @include screen-max-width-576{
+                max-width: 80px;
+            }
+        }
+    }
+}

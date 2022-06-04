@@ -1,0 +1,38 @@
+@import "src/style/variables";
+@import "src/style/mixin";
+.L-posts{
+    margin: 10px ;
+    padding: 10px;
+    border-radius: 15px;
+    width: 30%;
+    border: 1px solid $blue-dark;
+    @include screen-max-width-920{
+        width: 45%;
+    }
+
+    @include screen-max-width-576{
+        width: 100%;
+    }
+    .L-post-item{
+        img{
+            border-radius: 15px;
+        }
+        p{
+            margin-left: 10px;
+            font-size: $font-size-14;
+            @include screen-max-width-576{
+                font-size: $font-size-12;
+            }
+        }
+    }
+    .L-post-like{
+        margin-top: 10px;
+        color: $blue-dark;
+        font-size: $font-size-16;
+        font-weight: bold;
+        @include screen-max-width-576{
+            margin-top: 15px;
+            font-size: $font-size-14;
+        }
+    }
+}

@@ -1,0 +1,55 @@
+@import "src/style/variables";
+@import "src/style/mixin";
+.L-header{
+    border-radius: 25px;
+    max-width: 100%;
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 15px;
+    background-color: $white;
+    padding: 15px 0;
+}
+
+.L-header-logo {
+    width: 120px;
+    height: 45px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    @include  screen-max-width-576 {
+        width: 80px;
+        height: 30px;
+        margin: 10px 0;
+    }
+}
+.L-header-userName{
+    font-size: $font-size-20;
+    letter-spacing: 0.05cm;
+    @include  screen-max-width-767 {
+     font-size: $font-size-16;   
+    }
+}
+.L-header-loginBtn{
+    background-color: transparent;
+    a{
+        color: black;
+        font-size: $font-size-18;
+        @include  screen-max-width-767 {
+            font-size:$font-size-16;   
+           }
+    }
+}
+.L-header-log-out{
+    text-align: right;
+    button{
+        background-color: $red;
+        color: $white;
+        border-radius: 15px;
+        margin: 5px 0;
+        padding: 5px 10px;
+        &:hover{
+            background-color: rgb(134, 7, 7);
+            transition: $transition;
+        }
+    }
+}

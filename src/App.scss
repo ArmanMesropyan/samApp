@@ -1,0 +1,18 @@
+@import "src/style/variables";
+@import "src/style/mixin";
+.App-wrapper {
+    display: flex;
+    @include screen-max-width-767{
+        flex-direction: column;
+    }
+    .App-content {
+        margin-top: 20px;
+        &:nth-child(2) {
+            width: 90%;
+            @include screen-max-width-767{
+                width: 100%;
+            }
+           
+        }
+    }
+}

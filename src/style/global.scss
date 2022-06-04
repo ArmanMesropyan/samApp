@@ -1,0 +1,24 @@
+@import "./variables";
+@import "./mixin";
+
+
+.G-cursor-pointer {
+  cursor: pointer;
+}
+
+.G-hidden {
+  overflow: hidden;
+}
+
+.G-container {
+  max-width: 1280px;
+  width: 100%;
+  padding: 0 40px;
+  margin: 0 auto;
+  @include screen-max-width-767{
+    padding: 0 20px;
+  }
+  @include screen-max-width-576{
+    padding: 0 15px;
+  }
+}

@@ -1,0 +1,42 @@
+@import "src/style/variables";
+@import "src/style/mixin";
+.L-user-pages{
+    max-width: 300px;
+    width: 100%;
+    display: flex;
+    overflow-x:scroll;
+    padding: 0 15px;
+    span{
+        font-size:$font-size-20;
+        padding: 3px 10px;
+        cursor: pointer;
+        transition: $transition;
+        @include screen-max-width-576{
+           font-size: $font-size-16;
+        }
+    }
+    .L-user-active-page {
+        color: $blue-dark;
+        font-weight: bold;
+       
+    }
+    &::-webkit-scrollbar {
+        width: 10px;
+        @include screen-max-width-576{
+            height: 10px;
+         }
+       
+    }
+    
+    &::-webkit-scrollbar-track {
+        background-color: $grey-base;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+       
+        background-color: $blue-dark;
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.87);
+    }
+
+
+}
