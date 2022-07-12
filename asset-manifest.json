@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/samApp/static/css/main.72d8cc3b.css",
+    "main.js": "/samApp/static/js/main.3b1b1be8.js",
+    "static/css/342.64d7dca1.chunk.css": "/samApp/static/css/342.64d7dca1.chunk.css",
+    "static/js/342.2151222f.chunk.js": "/samApp/static/js/342.2151222f.chunk.js",
+    "static/css/233.882b067f.chunk.css": "/samApp/static/css/233.882b067f.chunk.css",
+    "static/js/233.624ef775.chunk.js": "/samApp/static/js/233.624ef775.chunk.js",
+    "static/css/55.ed22afb9.chunk.css": "/samApp/static/css/55.ed22afb9.chunk.css",
+    "static/js/55.4f495e4d.chunk.js": "/samApp/static/js/55.4f495e4d.chunk.js",
+    "static/js/936.ed1075fc.chunk.js": "/samApp/static/js/936.ed1075fc.chunk.js",
+    "static/media/Landscape-Color.jpg": "/samApp/static/media/Landscape-Color.15acb824bff477d61d20.jpg",
+    "static/media/icon.png": "/samApp/static/media/icon.38948e8765236f4c6356.png",
+    "static/media/1280px-Dyson_logo.svg.png": "/samApp/static/media/1280px-Dyson_logo.svg.5a3e58e49899c6295a56.png",
+    "static/media/236831.png": "/samApp/static/media/236831.ba422ca13bb76ae93687.png",
+    "static/media/11.gif": "/samApp/static/media/11.be27577c7fdeb069e309.gif",
+    "index.html": "/samApp/index.html",
+    "main.72d8cc3b.css.map": "/samApp/static/css/main.72d8cc3b.css.map",
+    "main.3b1b1be8.js.map": "/samApp/static/js/main.3b1b1be8.js.map",
+    "342.64d7dca1.chunk.css.map": "/samApp/static/css/342.64d7dca1.chunk.css.map",
+    "342.2151222f.chunk.js.map": "/samApp/static/js/342.2151222f.chunk.js.map",
+    "233.882b067f.chunk.css.map": "/samApp/static/css/233.882b067f.chunk.css.map",
+    "233.624ef775.chunk.js.map": "/samApp/static/js/233.624ef775.chunk.js.map",
+    "55.ed22afb9.chunk.css.map": "/samApp/static/css/55.ed22afb9.chunk.css.map",
+    "55.4f495e4d.chunk.js.map": "/samApp/static/js/55.4f495e4d.chunk.js.map",
+    "936.ed1075fc.chunk.js.map": "/samApp/static/js/936.ed1075fc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.72d8cc3b.css",
+    "static/js/main.3b1b1be8.js"
+  ]
+}
