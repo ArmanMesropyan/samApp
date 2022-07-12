@@ -6,7 +6,7 @@ import {  profileTC ,
           profileStatusTC ,
           updateProfileStatusTC} from '../../../../redux/reducers/profile-reducer';
 import { compose } from "redux";
-import { withRouter } from "react-router-dom";
+import {  withRouter } from "react-router-dom";
 
 const ProfileContainer = (props) => {
     const dispatch = useDispatch()
@@ -17,6 +17,9 @@ const ProfileContainer = (props) => {
         let userId = props.match.params.userId
         if(!userId ){
           userId = authUserId
+          if(!userId){
+            props.history.push('/login')
+          }
           }
           dispatch(profileTC(userId))
           dispatch(profileStatusTC(userId))

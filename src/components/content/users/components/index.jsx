@@ -3,9 +3,10 @@ import './index.scss'
 import img from '../../../../assets/img/236831.png'
 import { NavLink } from 'react-router-dom';
 import Pagination from './pagination';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { usersFollowTc , usersUnFollowTc} from '../../../../redux/reducers/users-reducer';
 const Users = (props) => {
+    const isAuth = useSelector((state) => state.auth.data.isAuth)
     const dispatch = useDispatch()
     console.log(props.followingInProgress )
     return (
@@ -14,7 +15,7 @@ const Users = (props) => {
       <Pagination
           onPageChanged={props.onPageChanged}
           currentPage={props.currentPage}
-          totalUsersCount={props.totalUsersCount}
+          totalItemsCount={props.totalUsersCount}
           pageSize={props.pageSize}
       />
       <div className='L-users-content G-flex G-justify-between G-flex-wrap'>
@@ -30,20 +31,24 @@ const Users = (props) => {
                          img } alt="img" />
                     </NavLink>
                 </div>
-                <div className='L-users-btn'>
+               {!isAuth ? null :  <div className='L-users-btn'>
                         {!u.followed
-                            ? <button disabled={props.followingInProgress.some(id => id === u.id)} 
+                            ? <button disabled={
+                                props.followingInProgress.some(id => id === u.id)
+                            } 
                             onClick={() => {
                                 dispatch(usersFollowTc(u))
                                 console.log(u.id)
                             }}>Follow</button>
-                            : <button disabled={props.followingInProgress.some(id => id === u.id)} 
+                            : <button disabled={
+                                props.followingInProgress.some(id => id === u.id)
+                            } 
                             onClick={() => {
                                 dispatch(usersUnFollowTc(u))
                                 console.log(u.id)
                             }}>unFolow</button>
                         }
-                     </div>
+                     </div>}
                  </div>
                  <div className='L-users-child'>
                      <span className='L-users-content'>

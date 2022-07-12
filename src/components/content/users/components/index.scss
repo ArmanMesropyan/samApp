@@ -33,6 +33,7 @@
                         height: 30px;
                         cursor: pointer;
                         margin: 10px 0;
+                       
                         @include screen-max-width-576 {
                             width: 70px;
                             height: 20px;
