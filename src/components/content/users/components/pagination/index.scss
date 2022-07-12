@@ -5,6 +5,28 @@
     width: 100%;
     display: flex;
     padding: 0 15px;
+    @include screen-max-width-576{
+        max-width: 100%;
+        flex-direction: column;
+    }
+ 
+    button{
+        padding: 5px;
+        border-radius: 15px;
+        border: 1px solid $blue-dark;
+        align-self: baseline;
+        @include screen-max-width-576{
+            margin:  15px auto;
+            width: 35%;
+
+        }
+    }
+    .L-user-pages-wrapper-main{
+        @include screen-max-width-576{
+            overflow-y: scroll;
+            height: 25px;
+         }
+    }
     span{
         font-size:$font-size-20;
         padding: 3px 10px;
@@ -13,6 +35,7 @@
         @include screen-max-width-576{
            font-size: $font-size-16;
         }
+      
     }
     .L-user-active-page {
         color: $blue-dark;
@@ -20,7 +43,7 @@
        
     }
     &::-webkit-scrollbar {
-        width: 10px;
+        width: 15px;
         @include screen-max-width-576{
             height: 10px;
          }

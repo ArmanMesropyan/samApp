@@ -15,13 +15,16 @@ const Pagination = ({ totalItemsCount, pageSize, onPageChanged, currentPage, por
         <div className="L-user-pages">
             {portionNumber > 1 &&
                 <button onClick={() => { setPortionNumber(portionNumber - 1) }}> Prev </button>}
-            {pages.filter(p => p >= leftPortionPageNumber && p <= rightPortionPageNumber)
-                .map((p) => {
-                    return <span
-                        key={Math.random().toString(36).substr(2, 9)}
-                        onClick={() => onPageChanged(p)}
-                        className={currentPage != p ? null : 'L-user-active-page'}>{p}</span>
-                })}
+            <div className='L-user-pages-wrapper-main'>
+                {pages.filter(p => p >= leftPortionPageNumber && p <= rightPortionPageNumber)
+                    .map((p) => {
+                        return <span
+                            key={Math.random().toString(36).substr(2, 9)}
+                            onClick={() => onPageChanged(p)}
+                            className={currentPage != p ? null : 'L-user-active-page'}>{p}</span>
+                    })}
+            </div>
+
             {portionCount > portionNumber && <button onClick={() => { setPortionNumber(portionNumber + 1) }}> Next </button>}
         </div>
 
