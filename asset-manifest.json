@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/samApp/static/css/main.72d8cc3b.css",
-    "main.js": "/samApp/static/js/main.3b1b1be8.js",
+    "main.js": "/samApp/static/js/main.96acfce4.js",
     "static/css/342.64d7dca1.chunk.css": "/samApp/static/css/342.64d7dca1.chunk.css",
     "static/js/342.2151222f.chunk.js": "/samApp/static/js/342.2151222f.chunk.js",
     "static/css/233.882b067f.chunk.css": "/samApp/static/css/233.882b067f.chunk.css",
@@ -16,7 +16,7 @@
     "static/media/11.gif": "/samApp/static/media/11.be27577c7fdeb069e309.gif",
     "index.html": "/samApp/index.html",
     "main.72d8cc3b.css.map": "/samApp/static/css/main.72d8cc3b.css.map",
-    "main.3b1b1be8.js.map": "/samApp/static/js/main.3b1b1be8.js.map",
+    "main.96acfce4.js.map": "/samApp/static/js/main.96acfce4.js.map",
     "342.64d7dca1.chunk.css.map": "/samApp/static/css/342.64d7dca1.chunk.css.map",
     "342.2151222f.chunk.js.map": "/samApp/static/js/342.2151222f.chunk.js.map",
     "233.882b067f.chunk.css.map": "/samApp/static/css/233.882b067f.chunk.css.map",
@@ -27,6 +27,6 @@
   },
   "entrypoints": [
     "static/css/main.72d8cc3b.css",
-    "static/js/main.3b1b1be8.js"
+    "static/js/main.96acfce4.js"
   ]
 }
