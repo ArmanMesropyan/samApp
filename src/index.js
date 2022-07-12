@@ -5,10 +5,10 @@ import { HashRouter } from 'react-router-dom';
 import App from './App';
 import store from './redux/index';
 
-
+// basename={process.env.PUBLIC_URL}
 ReactDOM.render(
   <Provider store={store}>
-    <HashRouter basename={process.env.PUBLIC_URL}>
+    <HashRouter >
       <App/>
     </HashRouter>
   </Provider>,
