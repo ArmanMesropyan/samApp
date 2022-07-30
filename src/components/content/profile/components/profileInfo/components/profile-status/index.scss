@@ -1,15 +1,28 @@
 @import "src/style/variables";
 @import "src/style/mixin";
-.L-profile-status{
+.L-profile-status {
     margin: 10px 0;
-    .L-status-child{
-        span{
+
+    .L-status-child {
+        margin-top: 5px;
+        span {
             font-size: $font-size-16;
+            border: 1px solid;
+            background-color: $grey-base;
+            padding: 0 7px;
+            border-radius: 5px;
         }
-        input{
-            border: 1.5px solid $blue-dark;
-            border-radius: 15px;
-            padding:0 5px;
+      
+        input {
+            border: 1px solid;
+            background-color: $white;
+            padding: 0 7px;
+            border-radius: 5px;
+      
         }
+    }
+    .L-user-status{
+        padding: 2px 10px;
+        background-color: yellow;
     }
 }

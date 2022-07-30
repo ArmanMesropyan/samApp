@@ -42,27 +42,41 @@ const initialState = {
   ],
   newPostText: '',
   profile: null,
-  status:''
+  status: ''
 
 }
 export const profileTC = createAsyncThunk(
   'profile/profileTC',
-    async (userId) => {
+  async (userId) => {
     const res = await getProfileAPI.getProfile(userId).then(data => data)
     return res
   }
 )
 export const profileStatusTC = createAsyncThunk(
   'profile/profileStatusTC',
-    async (userId) => {
-      const res = await getProfileAPI.getStatus(userId).then(data => data)
+  async (userId) => {
+    const res = await getProfileAPI.getStatus(userId).then(data => data)
     return res
   }
 )
 export const updateProfileStatusTC = createAsyncThunk(
   'profile/updateProfileStatusTC',
-    async (status) => {
-      const res = await getProfileAPI.updateStatus(status).then(data => data)
+  async (status) => {
+    const res = await getProfileAPI.updateStatus(status).then(data => data)
+    return res
+  }
+)
+export const updateProfilePhotoTC = createAsyncThunk(
+  'profile/updateProfilePhotoTC',
+  async (file) => {
+    const res = await getProfileAPI.updatePhoto(file).then(data => data)
+    return res
+  }
+)
+export const updateProfileTC = createAsyncThunk(
+  'profile/updateProfileTC',
+  async (data) => {
+    const res = await getProfileAPI.updateProfile(data).then(data => data)
     return res
   }
 )
@@ -97,7 +111,7 @@ const profileSlice = createSlice({
       console.log("статус не получен")
     },
     [updateProfileStatusTC.fulfilled]: (state, action) => {
-      if(action.payload.data.resultCode === 0 ){
+      if (action.payload.data.resultCode === 0) {
         console.log(action.payload.data)
         state.status = action.meta.arg
       }
@@ -106,6 +120,23 @@ const profileSlice = createSlice({
     [updateProfileStatusTC.rejected]: (state) => {
       console.log("статус не обновлен")
     },
+    [updateProfilePhotoTC.fulfilled]: (state, action) => {
+      console.log(action)
+      if (action.payload.data.resultCode === 0) {
+        state.profile.photos = action.payload.data.data.photos
+      }
+      console.log(action)
+    },
+    [updateProfilePhotoTC.rejected]: (state) => {
+      console.log("фото не обновлено")
+    },
+    [updateProfileTC.fulfilled]: (state, action) => {
+      if (action.payload.data.resultCode === 0) {
+        debugger
+        console.log(action)
+        // state.profile  = {...state.profile , action}
+      }
+    }
   }
 })
 

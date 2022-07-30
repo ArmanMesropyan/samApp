@@ -17,22 +17,24 @@ const ProfileStatus = (props) => {
     let newStatus = e.currentTarget.value
     setStatus(newStatus)
   }
-
+  console.log(props.status)
   return (
     <div className='L-profile-status'>
-      {!editMode
-        ? <div className='L-status-child'>
-          <span onClick={activeEditMode}>{props.status || 'my status'}</span>
-        </div>
-        : <div className='L-status-child'>
-          <input
-            autoFocus={true}
-            onBlur={deActiveEditMode}
-            onChange={onStatusChange}
-            type="text"
-            value={status} />
-        </div>
-      }
+      Status:
+      {props.isOwner ?
+        !editMode
+          ? <div className='L-status-child'>
+            <span onClick={activeEditMode}>{props.status || 'my status'}</span>
+          </div>
+          : <div className='L-status-child'>
+            <input
+              autoFocus={true}
+              onBlur={deActiveEditMode}
+              onChange={onStatusChange}
+              type="text"
+              value={status} />
+          </div>
+        : <span className='L-user-status'>{props.status || 'my status'}</span>}
     </div>
   )
 }

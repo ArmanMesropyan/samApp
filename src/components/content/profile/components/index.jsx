@@ -6,8 +6,10 @@ const Profile = (props) => {
   return (
     <div className='G-container ' >
       <ProfileInfo 
+        isOwner={props.isOwner}
         profile={props.profile}
         status={props.status} 
+        updatePhoto={props.updateProfilePhotoTC}
         updateStatus={props.updateProfileStatusTC} />
       <MyPost/>
     </div>
